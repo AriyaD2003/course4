@@ -42,5 +42,5 @@ class UsersService(BaseService):
 
 
     def update_password(self, new_pd):
-        new_pd.get("password_1")
-        new_pd.get("password_2")
+        user_password_1 = new_pd.get("password_1")
+        user_password_2 = new_pd.get("password_2")
