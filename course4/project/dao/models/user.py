@@ -14,3 +14,10 @@ class User(BaseMixin, db.Model):
 
     def __repr__(self):
         return f"<User '{self.name.title()}'>"
+    
+    
+    # def get_password(password):
+    #     return hashlib.md5(password.encode('utf-8')).hexdigest()
+    #
+    # def get_password_hash(password):
+    #     return base64.b64encode(get_password(password)).decode('utf-8')
