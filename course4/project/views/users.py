@@ -10,7 +10,7 @@ users_ns = Namespace("user")
 
 @users_ns.route("/")
 class UserView(Resource):
-    @login_required
+    # @admin_required
     @users_ns.response(200, "OK")
     @users_ns.response(404, "User не найден")
     def get(self):
@@ -24,7 +24,8 @@ class UserView(Resource):
 
 
 @users_ns.route("/<int:user_id>")
-class UserByIdView(Resource):
+class UserView(Resource):
+    # @admin_required
     @users_ns.response(200, "OK")
     @users_ns.response(404, "User не найден")
     def get(self, user_id: int):
